@@ -6,17 +6,34 @@
     <title>Halloween Jack O' Myers</title>
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
+  <main>
   <body>
+    
+    <div id="start-screen">
+      <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
+      <br/>
+      <button id="start-button">Start Game</button>
+      <p>Use the left and right arrow to control the car!</p>
+
+    </div>
+
+    <div id="game-screen">
     <h1>JACK O ' MYERS</h1>
     <h2 id="score">0</h2>
     <!--3x3 board -->
     <div id="board"></div>
+  </div>
+
+
     <div id="game-end">
       <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
       <h1>Game Over</h1>
       <br />
+      <h2 id="finalscore">0</h2>
       <button id="restart-button">Restart</button>
     </div>
+  </main>
+  <script type="text/javascript" src="src/js/game.js"></script>
     <script src="src/js/index.js"></script>
   </body>
 </html>

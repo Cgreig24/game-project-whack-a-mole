@@ -1,7 +1,7 @@
 body {
   font-family: serif, "Franklin Gothic Medium", "Arial Narrow", Arial, Helvetica;
   text-align: center;
-  background: url("../images/cemetery.jpg");
+  background: url("../../src/assets/images/cemetery.jpg");
   background-size: cover;
 }
 
@@ -37,7 +37,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 
-  background: url("../images/soil.png");
+  background: url("../../src/assets/images/soil.png");
   background-size: cover;
   border: 3px solid purple;
   border-radius: 25px;
@@ -47,7 +47,7 @@ h2 {
   /* height of board (540 x 540) divided into three. So each tile has height of 180*/
   width: 180px;
   height: 180px;
-  background-image: url("../images/grave2.png");
+  background-image: url("../../src/assets/images/grave2.png");
   background-size: cover;
 }
 

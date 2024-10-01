@@ -8,7 +8,7 @@ window.onload = function () {
 };
 
 let logo = document.createElement("img");
-logo.src = "../images/Halloween_logo.png";
+logo.src = "src/assets/images/Halloween_logo.png";
 //logo.addClassList("logo");
 logo.classList.add("logo");
 document.body.prepend(logo);
@@ -44,7 +44,7 @@ function setMoleLocation() {
     currentMoleTile.innerHTML = "";
   }
   let mole = document.createElement("img");
-  mole.src = "../images/Mike Myers 2.png";
+  mole.src = "src/assets/images/Mike Myers 2.png";
 
   //random title location for mole
   let num = getRandomTile();
@@ -71,7 +71,7 @@ function setGoodieLocation() {
   }
 
   let goodie = document.createElement("img");
-  goodie.src = "../images/Jack O Lantern.png";
+  goodie.src = "src/assets/images/Jack O Lantern.png";
 
   let num = getRandomTile();
 

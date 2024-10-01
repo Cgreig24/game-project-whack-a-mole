@@ -28,6 +28,10 @@ h2 {
   -webkit-text-stroke-color: orange;
 }
 
+#game-screen {
+  display: none;
+}
+
 #board {
   width: 540px;
   height: 540px;

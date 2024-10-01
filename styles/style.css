@@ -1,0 +1,66 @@
+body {
+  font-family: serif, "Franklin Gothic Medium", "Arial Narrow", Arial, Helvetica;
+  text-align: center;
+  background: url("../images/cemetery.jpg");
+  background-size: cover;
+}
+
+#logo {
+  width: 540px;
+  background-color: black;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin-top: 60px;
+  color: white;
+  font-size: 36px;
+  font-weight: 1000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: orange;
+}
+
+h2 {
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: orange;
+}
+
+#board {
+  width: 540px;
+  height: 540px;
+  background-color: green;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  background: url("../images/soil.png");
+  background-size: cover;
+  border: 3px solid purple;
+  border-radius: 25px;
+}
+
+#board div {
+  /* height of board (540 x 540) divided into three. So each tile has height of 180*/
+  width: 180px;
+  height: 180px;
+  background-image: url("../images/grave2.png");
+  background-size: cover;
+}
+
+/*all of the images appearing in the tile divs 
+*/
+#board div img {
+  width: 100px;
+  height: 100px;
+}
+
+/*Initially the Game screen is showing*/
+
+/*Initially the Game Over screen is hidden*/
+#game-end {
+  display: none;
+}

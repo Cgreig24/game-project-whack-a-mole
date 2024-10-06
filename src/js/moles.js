@@ -1,3 +1,0 @@
-class Moles {
-  constructor() {}
-}

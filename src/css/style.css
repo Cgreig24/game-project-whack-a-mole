@@ -1,8 +1,11 @@
 body {
   font-family: serif, "Franklin Gothic Medium", "Arial Narrow", Arial, Helvetica;
   text-align: center;
-  background: url("../../src/assets/images/cemetery.jpg");
-  background-size: cover;
+  background-color: black;
+}
+
+#start-screen {
+  background-color: black;
 }
 
 #logo {
@@ -28,12 +31,29 @@ h2 {
   -webkit-text-stroke-color: orange;
 }
 
+.change-page-button {
+  color: orange;
+  font-size: 20px;
+  background-color: black;
+  border: 1px solid orange;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#instructions {
+  color: white;
+  font-size: 20px;
+}
+
 #game-screen {
   display: none;
+  background: url("../../src/assets/images/cemetery.jpg");
+  background-size: cover;
 }
 
 #board {
-  width: 540px;
+  width: 720px;
   height: 540px;
   background-color: green;
 
@@ -55,16 +75,13 @@ h2 {
   background-size: cover;
 }
 
-/*all of the images appearing in the tile divs 
-*/
-#board div img {
-  width: 100px;
-  height: 100px;
-}
-
 /*Initially the Game screen is showing*/
 
 /*Initially the Game Over screen is hidden*/
 #game-end {
+  display: none;
+}
+
+#game-level-complete {
   display: none;
 }

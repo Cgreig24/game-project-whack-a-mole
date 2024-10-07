@@ -10,26 +10,34 @@
   <body>
     
     <div id="start-screen">
-      <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
+      <img src="src/assets/images/Halloween_logo.png" alt="" class="halloween-logo" />
       <br/>
-      <p id="instructions">Click on Mike Meyers to score points. If you click on a pumpkin you lose points. If you click on Laurie it's game over</p>
+      <h1>JACK O ' MYERS</h1>
+      <div class="instructions" id="instructions"><h3>How to Play</h3><p>Click on Mike Myers to score points, but watch out for Laurie!</p>
+        <ul><li>+10 points for Mike Myers</li>
+          <li>- 20 points for a pumpkin</li>
+          <li>Game Over if you click on Laurie</li></ul></div>
       <button id="start-button" class="change-page-button">Start Game</button>
+      <br/>
+      <img src="src/assets/images/Jack O Lantern.png" alt="" class="pumpkin-image" />
     </div>
 
     <div id="game-screen">
-    <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
+    <img src="src/assets/images/Halloween_logo.png" alt="" class="halloween-logo" />
     <h1>JACK O ' MYERS</h1>
+    <div class="game-info-headers">
     <h2 id="current-level">Current level</h2>
-    <h2 id="score">Score: 0</h2>
-    <h2 id="required-score">Need X to win</h2>
     <h2 id="timer">Countdown: 10</h2>
-    <h2 id="mike-speed"></h2>
+    <h2 id="required-score">Need X to win</h2>
+    <h2 id="score">Score: 0</h2>
+    <!--<h2 id="mike-speed"></h2>-->
     <!--3x3 board -->
+  </div>
     <div id="board"></div>
   </div>
 
   <div id="game-level-complete">
-    <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
+    <img src="src/assets/images/Halloween_logo.png" alt="" class="halloween-logo" />
     <h1 id="level-complete">Congratulations! Level Complete</h1>
     <br />
     <h2 id="level-score">Score: 0</h2>
@@ -38,7 +46,7 @@
 
 
     <div id="game-end">
-      <img src="src/assets/images/Halloween_logo.png" alt="" class="" />
+      <img src="src/assets/images/Halloween_logo.png" alt="" class="halloween-logo" />
       <h1>Game Over</h1>
       <br />
       <h2 id="finalscore">Final Score: 0</h2>

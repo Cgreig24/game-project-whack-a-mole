@@ -15,7 +15,6 @@ window.onload = function () {
 
   //Start Timer
   function startTimer() {
-    //let timeRemaining = 10;
     let timer = setInterval(function () {
       if (game.timeRemaining >= 0) {
         document.getElementById(
@@ -23,10 +22,8 @@ window.onload = function () {
         ).innerHTML = `Countdown: ${game.timeRemaining}`;
         game.timeRemaining--;
       } else {
-        // game.endGame();
         hasCompletedLevel();
         clearInterval(startTimer);
-        //game.timeRemaining = 10 * game.level;
       }
     }, 1000);
   }
@@ -35,7 +32,6 @@ window.onload = function () {
     if (game.score >= game.levelCondition) {
       game.levelIsCompleted = true;
       game.nextLevel();
-      //game.levelIsCompleted = false;
     } else {
       game.endGame();
     }
@@ -44,8 +40,8 @@ window.onload = function () {
   //Set the game board with tiles
   function setGame() {
     game = new Game();
-    //startTimer();
     game.startLevel();
+    game.themeMusic.play();
     for (let i = 0; i < 12; i++) {
       let tile = document.createElement("div");
       tile.id = i.toString();
@@ -58,15 +54,12 @@ window.onload = function () {
     //Set Intervals for moles to appear
 
     //call Mike every X seconds
-    //setInterval(setMikeLocation, randomTime(400, 2500));
     setInterval(setMikeLocation, 1200);
 
     //call additional pumpkin every X seconds
-    // setInterval(setPumpkinLocation, randomTime(600, 2500));
     setInterval(setPumpkinLocation, 1600);
 
     //call laurie every X seconds
-    // setInterval(setLaurieLocation, randomTime(1500, 2500));
     setInterval(setLaurieLocation, 2500);
   }
 
@@ -95,9 +88,6 @@ window.onload = function () {
     if (game.gameIsOver) {
       return;
     }
-    //if (currentMikeTile) {
-    // currentMikeTile.innerHTML = "";
-    //}
 
     //random title location for mole
     let randomTile = getRandomTile();
@@ -122,7 +112,7 @@ window.onload = function () {
   }
 
   //Sets image of Jack O Lantern as non dangerous character
-  //Selects one of the 9 tiles at random to append this image to
+  //Selects one of the 12 tiles at random to append this image to
 
   function setPumpkinLocation() {
     let pumpkin = new Pumpkin(gameScreen);
@@ -149,6 +139,7 @@ window.onload = function () {
     currentPumpkinTile.appendChild(pumpkin.mole);
     currentPumpkinTile.addEventListener("click", selectTile);
 
+    //remove pumpkin
     setTimeout(() => {
       removeMole(currentPumpkinTile);
     }, game.disappearSpeed);
@@ -160,10 +151,6 @@ window.onload = function () {
     if (game.gameIsOver) {
       return;
     }
-
-    //if (currentLaurieTile) {
-    // currentLaurieTile.innerHTML = "";
-    //    }
 
     let randomTile = getRandomTile();
 
@@ -195,7 +182,6 @@ window.onload = function () {
       game.score += 10;
 
       //this links back to the html file which display score at the top
-      //document.getElementById("score").innerText = this.score.toString();
       document.getElementById("score").innerText = `Score: ${game.score}`;
       removeMole(currentMikeTile);
     }
@@ -206,10 +192,8 @@ window.onload = function () {
         game.score -= 20;
         document.getElementById("score").innerText = game.score;
       }
-      //game.gameIsOver = true;
     } else if (this == currentLaurieTile) {
       document.getElementById("score").innerText = `Game Over: ${game.score}`;
-      //game.gameIsOver = true;
       game.endGame();
       document.getElementById("finalscore").innerText = `Score: ${game.score}`;
     }

@@ -15,6 +15,7 @@ class Game {
     this.gameLoopFrequency = Math.round(1000 / 60);
     this.gameRunning = false;
     this.disappearSpeed = 800;
+    this.themeMusic = new Audio("src/assets/sounds/Halloween-theme-tune.mp4");
   }
 
   startLevel() {
@@ -35,45 +36,7 @@ class Game {
       "required-score"
     ).innerText = `Target: ${this.levelCondition}`;
     document.getElementById("current-level").innerText = `Level: ${this.level}`;
-    document.getElementById(
-      "mike-speed"
-    ).innerText = `Speed: ${this.disappearSpeed}`;
   }
-
-  /*
-  startTimer() {
-    let timer = setInterval(function () {
-      if (this.timeRemaining >= 0) {
-        this.timerText.innerHTML = `Countdown: ${this.timeRemaining}`;
-        this.timeRemaining--;
-      } else {
-        this.endGame();
-        clearInterval(startTimer);
-      }
-    }, 1000);
-  }
-    */
-
-  //game over condition
-
-  /*
-  gameLoop() {
-    //let timeRemaining = 10;
-    let timer = setInterval(function () {
-      if (this.timeRemaining <= 0) {
-        this.endGame();
-        //clearInterval(this.startTimer);
-      } else if (this.score >= this.levelCondition) {
-        // victory
-        this.victory();
-      } else {
-        // continue
-        this.timeRemaining--;
-        this.timerText.innerHTML = `Countdown: ${this.timeRemaining}`;
-      }
-    }, 1000);
-  }
-    */
 
   nextLevel() {
     document.getElementById(

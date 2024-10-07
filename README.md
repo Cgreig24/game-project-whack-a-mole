@@ -40,10 +40,8 @@ Left click with the mouse to score (or lose) points.
 Sounds: Background music and sound effects are located in the /assets/sounds/ directory.
 Images: Pop up characters and background are stored in the /assets/images directory.
 
-<h2>License</h2>
-
 <h2>Acknowledgements</h2>
 <p>This is a variation on the classic arcade game whack-a-mole</p>
-<p>Theme and characters are from the 1978 film Halloween</p>
+<p>Theme and characters are from the 1978 John Carpenter film Halloween</p>
 <p>Original Halloween theme music by John Carpenter. Asset used is from Music by Marc Matthews
 YouTube Channel:    / @marcmatthewsproducer  </p>

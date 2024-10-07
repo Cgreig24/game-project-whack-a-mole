@@ -80,7 +80,7 @@ window.onload = function () {
   }
 
   //Sets image of mike myers as mole
-  //Selects one of the 9 tiles at random to append this image to
+  //Selects one of the 12 tiles at random to append this image to
 
   function setMikeLocation() {
     mike = new MikeMyers(gameScreen);
